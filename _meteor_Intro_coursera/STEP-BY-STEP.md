@@ -6,7 +6,35 @@ This is the code of the course https://www.coursera.org/learn/meteor-development
 In this module we'll be installing Meteor tools, editing a template and learning how to define a template helper and template event listeners.
 https://www.meteor.com/install
 
-```$ curl https://install.meteor.com/ | sh```
+#### Installation in Windows
+```
+https://install.meteor.com/windows```
+Or using Chocolatey:
+```
+choco install meteor
+choco install meteor --version 1.4.2.3
+choco upgrade meteor
+```
+Installation is located in folder ```C:\Users\brjap\AppData\Local\.meteor```
+
+This is the global installation:
+```
+meteor --version```
+Now, for your project you may inherit this version or use another version of Meteor. This is specified in file:
+```
+<PROJECT_FOLDER>\.meteor\release```
+
+To make it match with your global version, edit the file, from:
+```
+METEOR@1.4.2.3```
+to
+````
+METEOR@1.7.0.5```
+
+#### Installation in Linux
+```
+$ curl https://install.meteor.com/ | sh
+curl "https://install.meteor.com/?release=1.4.2.3" | sh```
 
 You will receive this output:
 
@@ -27,7 +55,13 @@ For uninstalling:
 $ sudo rm /usr/local/bin/meteor
 $ rm -rf ~/.meteor
 ```
-Then run the app of week 1:
+For checking which version is installed:
+```
+$ cat ~/.meteor/release
+$ meteor --version
+$ meteor show meteor```
+
+#### Then run the app of week 1
 ```
 $ cd ~
 $ git clone https://github.com/therobotacademy/devops-meteor meteor-source
@@ -36,13 +70,16 @@ $ cd meteor-dev
 $ meteor create image-share --bare
 
 $ cd image-share
-$ cat .meteor/release  # This will check which version is installed
-
 $ cp -r ~/meteor-source/_meteor_Intro_coursera/week_1_image_share/* .
 
 $ meteor
 ```
-
+Alternatively you can build the app in the folder of the source code:
+```
+$ cd ~/meteor-source/_meteor_Intro_coursera/week_1_image_share/
+$ meteor npm install
+$ meteor
+```
 
 
 # Week 2 Databases and collections
