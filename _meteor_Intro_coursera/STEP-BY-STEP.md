@@ -3,6 +3,9 @@ In this introductory course you will learn how to create a complete, multi-user 
 This is the code of the course https://www.coursera.org/learn/meteor-development
 
 # Week 1 Introduction to Meteor
+### Running version: ``` image_share_week1 ```
+#### Load 3 images and reduce size to 50px on click
+
 In this module we'll be installing Meteor tools, editing a template and learning how to define a template helper and template event listeners.
 https://www.meteor.com/install
 
@@ -86,7 +89,8 @@ $ cd ~/meteor-source/_meteor_Intro_coursera/week_1_image_share/
 $ meteor npm install
 $ meteor
 ```
-
+Each time you click an image, it will reduce its size to 50 px.
+Reloading the page will restore the originals.
 
 # Week 2 Databases and collections
 We will be creating Mongo Collections and using Mongo find and insert operations. In addition, we will be looking at how to control a Bootstrap modal from Meteor and we will be using third party Meteor packages to add functionality.
@@ -94,6 +98,47 @@ We will be creating Mongo Collections and using Mongo find and insert operations
 - Use mongodb find and insert operations
 - Operate a Bootstrap modal from Meteor
 - Use third party Meteor packages to add functionality
+
+Place in the app folder the following files corresponding to week2:
+- package.json
+- image_share.js, .html, .css
+
+```package.json``` contains two dependencies:
+ - ```"babel-runtime": "^6.18.0"```
+ - ```"bcrypt": "^0.8.7"```
+
+ The second requires ```node-gyp```. So let's add this depedency in ```package.json```
+
+ Then:
+ ```
+ meteor npm install```
+ Check packages and versions:
+```
+ meteor npm list --depth=0```
+Then run the app:
+ ```
+ meteor```
+
+
+[TESTS UNDER WINDOWS 10 ------------------------------------]
+
+ We will do it directly with native ```npm```, installing ```https://nodejs.org/dist/v8.11.4/node-v8.11.4-x64.msi```
+
+ For installing it requires ```node-gyp```,
+ as explained in ```https://github.com/nodejs/node-gyp```:
+```
+npm install --global --production windows-build-tools
+npm install node-gyp
+npm install bcrypt@0.8.7```
+
+[-------------------------------------------------------------------------------]
+
+For reseting the database you have to stop the server and run this command:
+```
+meteor reset```
+Then run the app, and you will see that 0 images are reported.
+
+Restart the app and finally the images will be loaded in MongoDB and the total count reported on the console.
 
 # Week 3 User authentication
 In this module we will be looking at adding a user authentication to your Meteor app and learning how to use Mongo filters. Finally, we will be using the Meteor reactive Session variable and we will implement an infinite scroll.
