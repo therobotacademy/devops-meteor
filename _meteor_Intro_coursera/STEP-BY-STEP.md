@@ -132,6 +132,8 @@ npm install node-gyp
 npm install bcrypt@0.8.7```
 
 [-------------------------------------------------------------------------------]
+### Running version: ``` image_share_week2_a ```
+#### Load 22 images in MongoDB and reduce size to 50px on click
 
 For reseting the database you have to stop the server and run this command:
 ```
@@ -140,6 +142,9 @@ Then run the app, and you will see that 0 images are reported.
 
 Restart the app and finally the images will be loaded in MongoDB and the total count reported on the console.
 
+### Running version: ``` image_share_week2_b ```
+#### Remove one item from the collection (delete button)
+From 6:45 of video [Better startup script, removing items from a collection](https://www.coursera.org/learn/meteor-development/lecture/hZwo6/better-start-up-script-removing-items-from-a-collection)
 # Week 3 User authentication
 In this module we will be looking at adding a user authentication to your Meteor app and learning how to use Mongo filters. Finally, we will be using the Meteor reactive Session variable and we will implement an infinite scroll.
 - Employ user authentication in your Meteor app
