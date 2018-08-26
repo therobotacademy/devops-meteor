@@ -9,12 +9,16 @@ https://www.meteor.com/install
 #### Installation in Windows
 ```
 https://install.meteor.com/windows```
-Or using Chocolatey:
+Or using [Chocolatey](https://github.com/meteor/meteor-chocolatey-installer):
 ```
 choco install meteor
-choco install meteor --version 1.4.2.3
-choco upgrade meteor
+# Installs 1.7.0.5 and the course is built on 1.4.2.3
+
+# Next command removes previous version before installing the new one
+choco install meteor --x86 --params="'/RELEASE:1.4.2.3'"
 ```
+*[Note](https://github.com/meteor/meteor-chocolatey-installer): Prior to Meteor 1.6, 64-bit versions were not available. Therefore, in order to install versions prior to Meteor 1.6, you'll also need to pass Chocolatey's --x86 option when running choco install on 64-bit Windows platforms.*
+
 Installation is located in folder ```C:\Users\brjap\AppData\Local\.meteor```
 
 This is the global installation:
@@ -24,12 +28,14 @@ Now, for your project you may inherit this version or use another version of Met
 ```
 <PROJECT_FOLDER>\.meteor\release```
 
-To make it match with your global version, edit the file, from:
+To make it match with your global version, you could edit the file, from:
 ```
 METEOR@1.4.2.3```
 to
 ````
 METEOR@1.7.0.5```
+
+But this produces compatibility errors of packages when running at least in Windows. So let us keep the original version of the code.
 
 #### Installation in Linux
 ```
