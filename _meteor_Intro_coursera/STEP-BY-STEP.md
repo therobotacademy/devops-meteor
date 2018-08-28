@@ -132,7 +132,7 @@ npm install node-gyp
 npm install bcrypt@0.8.7```
 
 [-------------------------------------------------------------------------------]
-### Running version: ``` image_share_week2_a ```
+### Version ``` image_share_week2_a ```
 #### Load 22 images in MongoDB and reduce size to 50px on click
 
 For reseting the database you have to stop the server and run this command:
@@ -142,31 +142,25 @@ Then run the app, and you will see that 0 images are reported.
 
 Restart the app and finally the images will be loaded in MongoDB and the total count reported on the console.
 
-### Running version: ``` image_share_week2_b ```
+### Version ``` image_share_week2_b ```
 #### Remove one item from the collection (delete button)
 From 6:45 of video [Better startup script, removing items from a collection](https://www.coursera.org/learn/meteor-development/lecture/hZwo6/better-start-up-script-removing-items-from-a-collection)
+Button appears but it doesn't work.
 
-### Next version: ``` image_share_week2_c ``` Star Rating and sorting
+This bug as well as the one in the following version seems to be due to not having the right ```package.json``` file.
+
+### Version ``` image_share_week2_c ``` Star Rating and sorting
 ```
 https://atmospherejs.com/barbatus/stars-rating
 meteor add barbatus:stars-rating
 meteor update less
 ```
-After the last update, meteor reports this:
-```
-babel-compiler             upgraded from 6.13.0 to 6.24.7
-babel-runtime*             upgraded from 0.1.13 to 1.1.1
-caching-compiler           upgraded from 1.1.9 to 1.1.10
-ecmascript                 upgraded from 0.5.9 to 0.9.0
-ecmascript-runtime         upgraded from 0.3.15 to 0.5.0
-ecmascript-runtime-client  added, version 0.5.0
-ecmascript-runtime-server  added, version 0.5.0
-less*                      upgraded from 1.0.14 to 2.7.12
-meteor                     upgraded from 1.6.0 to 1.8.0
-modules                    upgraded from 0.7.7 to 0.11.0
-modules-runtime            upgraded from 0.7.7 to 0.9.0
-promise                    upgraded from 0.8.8 to 0.10.0
-```
+but definitely, the app does not work:
+
+```error: no plugin found for stars_rating.less in barbatus:stars-rating; a plugin for *.less was active when it was published but none is now```
+
+This error as well as the bug in the previous version seems to be due to not having the right ```package.json``` file.
+
 
 # Week 3 User authentication
 In this module we will be looking at adding a user authentication to your Meteor app and learning how to use Mongo filters. Finally, we will be using the Meteor reactive Session variable and we will implement an infinite scroll.
@@ -181,3 +175,9 @@ In this module we will show you how to perform basic security testing on your ap
 - Develop basic data security features
 - Use folders to organise Meteor application code
 - Use iron:router to implement routes
+
+On error:
+```
+ meteor npm install --save babel-runtime
+ ```
+ This will include the dependency in ```package.json``` and it will not be needed the manual installation when cloning the app.
