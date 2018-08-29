@@ -149,6 +149,7 @@ Button appears but it doesn't work.
 
 
 #### Star Rating and sorting
+Rating still anonymous
 
 ### Version ``` image_share_week2```
 
