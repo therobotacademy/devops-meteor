@@ -142,24 +142,17 @@ Then run the app, and you will see that 0 images are reported.
 
 Restart the app and finally the images will be loaded in MongoDB and the total count reported on the console.
 
-### Version ``` image_share_week2_b ```
+### Version ``` image_share_week2b```
 #### Remove one item from the collection (delete button)
 From 6:45 of video [Better startup script, removing items from a collection](https://www.coursera.org/learn/meteor-development/lecture/hZwo6/better-start-up-script-removing-items-from-a-collection)
 Button appears but it doesn't work.
 
-This bug as well as the one in the following version seems to be due to not having the right ```package.json``` file.
 
-### Version ``` image_share_week2_c ``` Star Rating and sorting
-```
-https://atmospherejs.com/barbatus/stars-rating
-meteor add barbatus:stars-rating
-meteor update less
-```
-but definitely, the app does not work:
+#### Star Rating and sorting
 
-```error: no plugin found for stars_rating.less in barbatus:stars-rating; a plugin for *.less was active when it was published but none is now```
+### Version ``` image_share_week2```
 
-This error as well as the bug in the previous version seems to be due to not having the right ```package.json``` file.
+#### Implement image adding with a Bootstrap Modal
 
 
 # Week 3 User authentication
